@@ -179,33 +179,9 @@ p {
 }
 button {
   padding: 10px;
+ margin: 20px;
   content: "click me";
   border-radius: 8px;
   background-color: purple;
   color: white;
 }
-button:hover{
-  background-color: rgb(166, 241, 28);
-  color: black;
-  font-size: large;
-  animation: animate 3s infinite linear;
-}
-
-button::after {
-  content: 'Click here'; /* Initial content */
-}
-
-button:hover::after {
-  content: 'Click the letter'; /* Content to display on hover */
-  
-}
-@keyframes animate {
-  0% {
-    transform: translateX(100px); /* Move 100px to the right */
-  }
-  100% {
-    transform: translateX(-100px); /* Move 100px to the left */
-  }
-}
-
-

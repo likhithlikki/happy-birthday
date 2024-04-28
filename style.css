@@ -1,8 +1,8 @@
 body {
-  margin: 0;
+  margin-top: 100px;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url(https://img.lovepik.com/photo/48013/0603.jpg_wh860.jpg); /* Replace 'background.jpg' with your image file */
+  background-color: #260961; /* Replace 'background.jpg' with your image file */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,9 +12,34 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-
+ opacity: 0%;
 }
+.scrolling-text-container {
+  width: 350px;
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 550px;
+  margin-bottom: 50px;
+}
+
+.scrolling-text {
+  animation: scrollRight 10s linear infinite;
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  
+  to {
+    transform: translateX(+100%);
+  }
+}
+
 .envelope {
+  margin-top: 65px;
   position: relative;
   cursor: pointer;
   
@@ -76,16 +101,18 @@ body {
 }
 .letter {
   position: absolute;
-  background: rgb(0, 0, 0);
+  background: rgb(45, 34, 34);
   width: 230px;
-  height: 180px;
+  height: 220px;
   top: 10px;
   left: 10px;
   transition: 0.5s;
+  opacity: 0%;
 }
 .envelope:hover .letter {
+  opacity: 100%;
   transition-delay: 1s;
-  transform: translateY(-150px);
+  transform: translateY(-180px);
   z-index: 2;
 }
 .text1 {
@@ -151,19 +178,27 @@ body {
 
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 100px;
+  max-width: 500px;
+  margin-bottom: 80px;
+  padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to make the content readable */
+  border-radius: 30px;
+  padding: 10px;
 }
-
+.audio_container{
+  background-color: #6c8714;
+  margin-bottom: 100px;
+  color: crimson;
+  padding: 20px;
+   border-radius: 15px;
+}
 header {
   text-align: center;
   margin-bottom: 30px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 20px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -173,15 +208,44 @@ main {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   color: #fff;
 }
 button {
   padding: 10px;
- margin: 20px;
   content: "click me";
   border-radius: 8px;
   background-color: purple;
   color: white;
+  margin-bottom: 50px;
+}
+
+
+
+.container1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image-container1 {
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+img {
+  height: 300px; /* Set a fixed height */
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
+select {
+  padding: 10px;
+  font-size: 16px;
 }

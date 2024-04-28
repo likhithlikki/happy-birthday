@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARSHI_chinni</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+     </script>
 </head>
 <body>
-  <div class="container">
+  <div class="scrolling-text-container">
+    <div class="scrolling-text">Happy Birthday Harshiii</div>
+  </div>
+  
+  <div class="container" style="opacity: 100%;">
     <header>
-        <h1>Many more happy returns of the day 🎈🎉🎊🥳🥳🥳, <span id="girlfriendName">HARSHITHA!!!</span>!</h1>
+        <h1>Many more happy returns of the day 🎈🎉🎊🥳🥳 <span id="girlfriendName">HARSHITHA!!!</span>!</h1>
     </header>
     
     <main>
         <p>You are the light of my life, and on this special day, I want to express my love for you 🥰.</p>
-        <!-- Add more content here -->
     </main>
+</div>
+<div class="audio_container" style="opacity: 100%;" >
+  <select id="songSelect" onchange="playSelectedSong()">
+    <option value="wannabe yours.mp3">Song 1</option>
+    <option value="infinity_slowed.mp3">Song 2</option>
+    <option value="nethone.mp3">Song 3</option>
+    <option value="padi padileche manasu.mp3">Song 4</option>
+</select>
+<audio id="audioPlayer"  controls autoplay>
+    <source src="wannabe yours.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 </div>
 <br><div>
 <div class="envelope">
@@ -43,5 +60,21 @@
     <br><br><br><br>
     <button >close the letter</button>
   </div>
+<h3>My world <br>Just kidding 🫠</h3>
+  <div class="container1">
+    <div class="image-container1">
+      <img src="img144.png" id="image" alt="Image">
+    </div>
+    <div class="selector-container1">
+      <select id="resolution" onchange="changeImage()">
+        <option value="img144.png">144p</option>
+        <option value="img240.png">240p</option>
+        <option value="img360.png">360p</option>
+        <option value="imghd.jpg">1080p</option>
+      </select>
+    </div>
+  </div>
+ 
+  <script src="script.js"></script>
 </body>
 </html>

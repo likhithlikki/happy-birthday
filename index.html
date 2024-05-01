@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARSHI_chinni</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="style.css">
     <script>
      </script>
 </head>
@@ -23,16 +24,19 @@
     </main>
 </div>
 <div class="audio_container" style="opacity: 100%;" >
-  <select id="songSelect" onchange="playSelectedSong()">
-    <option value="wannabe yours.mp3">Song 1</option>
-    <option value="infinity_slowed.mp3">Song 2</option>
-    <option value="nethone.mp3">Song 3</option>
-    <option value="padi padileche manasu.mp3">Song 4</option>
-</select>
 <audio id="audioPlayer"  controls autoplay>
     <source src="wannabe yours.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+</div>
+<div>
+<select id="songSelect" onchange="playSelectedSong()">
+  <option value="wannabe yours.mp3">Song 1</option>
+  <option value="infinity_slowed.mp3">Song 2</option>
+  <option value="nethone.mp3">Song 3</option>
+  <option value="padi padileche manasu.mp3">Song 4</option>
+</select>
 </div>
 <br><div>
 <div class="envelope">
@@ -53,7 +57,7 @@
   <div class="top"></div>
   <div class="shadow"></div>
   <div class="text1">
-    <h2>Hey! Listen I Have Something For You</h2>
+    <h2 style="align-items: center;justify-content:center;">Hey! Listen I Have Something For You</h2>
   </div>
 </div>
     <script src="script.js"></script>
@@ -74,7 +78,7 @@
       </select>
     </div>
   </div>
- 
   <script src="script.js"></script>
+  
 </body>
 </html>

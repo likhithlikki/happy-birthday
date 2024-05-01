@@ -2,7 +2,9 @@ body {
   margin-top: 100px;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #260961; /* Replace 'background.jpg' with your image file */
+  background-image: url(./propose.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +22,12 @@ body {
   padding: 10px;
   margin-top: 550px;
   margin-bottom: 50px;
+}
+#songSelect{
+  border: solid 2.5px rgb(12, 223, 251);
+  border-radius: 8px;
+  position: relative;
+  bottom: 40px;
 }
 
 .scrolling-text {
@@ -181,12 +189,13 @@ body {
   max-width: 500px;
   margin-bottom: 80px;
   padding-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to make the content readable */
+  background-color: rgba(80, 64, 64, 0.3); /* Add a semi-transparent background to make the content readable */
   border-radius: 30px;
+  border: 2px black double;
   padding: 10px;
 }
 .audio_container{
-  background-color: #6c8714;
+  background-color: rgb(150, 1, 115);;
   margin-bottom: 100px;
   color: crimson;
   padding: 20px;
@@ -219,6 +228,12 @@ button {
   background-color: purple;
   color: white;
   margin-bottom: 50px;
+  position: relative;
+  left: 65px;
+}
+button:hover{
+  color: #260961;
+  background-color: aqua;
 }
 
 
@@ -248,4 +263,22 @@ img {
 select {
   padding: 10px;
   font-size: 16px;
+}
+.back-vid{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media(min-aspect-ratio:16/9){
+  .back-vid{
+    width: 100%;
+    height: auto;
+  }
+}
+@media(max-aspect-ratio:16/9){
+  .back-vid{
+    width: auto;
+    height: 100%;
+  }
 }

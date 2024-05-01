@@ -22,27 +22,33 @@ body {
   padding: 10px;
   margin-top: 550px;
   margin-bottom: 50px;
+  display:flex ;
 }
 #songSelect{
-  border: solid 2.5px rgb(12, 223, 251);
-  border-radius: 8px;
+  border: solid 2px rgb(64, 190, 222);
+  border-radius: 89px;
   position: relative;
   bottom: 40px;
+  background-color: rgba(80, 64, 64, 0.3);
+  color: #ff00f2;
 }
 
 .scrolling-text {
-  animation: scrollRight 10s linear infinite;
-  font-size: larger;
+  animation: scrollRight 8s linear infinite;
+  font-size:30px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+ text-decoration:solid;
+
 }
 
 @keyframes scrollRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   
   to {
-    transform: translateX(+100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -211,6 +217,9 @@ h1 {
   color: #fff;
   text-transform: uppercase;
 }
+h3{
+  color: #18d3f4;
+}
 
 main {
   text-align: center;
@@ -224,12 +233,13 @@ p {
 button {
   padding: 10px;
   content: "click me";
+  border: #18d3f4 solid 2px;
   border-radius: 8px;
-  background-color: purple;
   color: white;
   margin-bottom: 50px;
   position: relative;
   left: 65px;
+  background-color: rgba(80, 64, 64, 0.3);
 }
 button:hover{
   color: #260961;
@@ -257,12 +267,17 @@ img {
   max-width: 100%;
   display: block;
   margin: 0 auto; /* Center the image horizontally */
+  border-radius: 9px;
+  border: #18d3f4 3px solid;
 }
 
 
 select {
   padding: 10px;
   font-size: 16px;
+  background-color: rgba(80, 64, 64, 0.3);
+  border: #18d3f4 solid 2px;
+  color: rgb(166, 159, 236);
 }
 .back-vid{
   position: absolute;

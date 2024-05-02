@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARSHI_chinni</title>
     <link rel="stylesheet"  href="style.css">
-    <script>
-     </script>
+    <script src="script.js"></script>
+
 </head>
 <body>
   <div class="scrolling-text-container">
@@ -88,21 +88,14 @@
 
 
 
-  <script src="script.js"></script>
+
 
 
   <script>
-    const videos = document.querySelectorAll('video');
     var audioPlayer = document.getElementById("audioPlayer");
-    function pauseAllExcept(selectedAudio) {
-      audioElements.forEach(audio => {
-          if (audio !== selectedAudio) {
-              audio.pause();
-          }
-      });
-  }
-  
-  // Function to play the selected song
+    var songSelect = document.getElementById("songSelect");
+    const videos = document.querySelectorAll('video');
+
   function playSelectedSong() {
       // Get the selected audio element
       const selectedAudio = document.getElementById('audioPlayer');
@@ -118,6 +111,16 @@
       selectedAudio.play();
     
   }
+  function pauseAllExcept(selectedAudio) {
+    const allAudio = document.querySelectorAll('audio');
+    allAudio.forEach(audio => {
+        if (audio !== selectedAudio) {
+            audio.pause();
+        }
+    });
+}
+
+
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (

@@ -20,7 +20,7 @@ body {
   width: 350px;
   white-space: nowrap;
   padding: 10px;
-  margin-top:4550px;
+  margin-top:4600px;
   margin-bottom: 50px;
   display:flex ;
 }
@@ -30,7 +30,8 @@ body {
   position: relative;
   bottom: 40px;
   background-color: rgba(80, 64, 64, 0.3);
-  color: #ff00f2;
+  color: #ffffff;
+  background-color: #260961;
 }
 
 .scrolling-text {
@@ -316,8 +317,9 @@ option:hover{
  
 }
 video {
-  max-width: 104.5%;
+  max-width: 100%;
   height: auto;
   margin: 20px 0;
-  border: #18d3f4;
+  border-top: #18d3f4 solid 4px; 
+  border-bottom: #2df600 solid 4px; 
 }

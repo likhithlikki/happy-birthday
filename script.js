@@ -4,7 +4,7 @@ var songSelect = document.getElementById("songSelect");
 // Set body opacity based on password
 let name = prompt("Enter your name: ");
 
-if (name === "chinni") {
+if (name === "muddada") {
   document.querySelector("body").style.opacity = "100%";
   alert("Thanks for confirming!");
   audioPlayer.play();

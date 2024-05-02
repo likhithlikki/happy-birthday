@@ -13,8 +13,6 @@
   <div class="scrolling-text-container">
     <div class="scrolling-text">Happy Birthday Harshiii</div>
   </div>
-
-  <marquee behavior="scroll" direction="left">dfghjkl</marquee>
   
   <div class="container" style="opacity: 100%;">
     <header>
@@ -77,10 +75,96 @@
         <option value="img240.png" style="background-color: #8594e4;">240p</option>
         <option value="img360.png" style="background-color:#6643b5;">360p</option>
         <option value="imghd.jpg" style="background-color: #430f58;">1080p</option>
+    
       </select>
     </div>
-  </div>
-  <script src="script.js"></script>
   
+  <div class="video-container">
+    <video id="video1" src="./bday-wish.mp4" muted loop></video>
+    <video id="video2" src="./A Masterpiece.mp4" muted></video>
+    <video id="video3" src="./H❤.mp4" muted></video>
+    <video id="video4" src="./fav_person.mp4" muted></video>
+    <video id="video5" src="./lyrics.mp4" muted></video>
+
+
+
+  <script src="script.js"></script>
+
+
+  <script>
+    const videos = document.querySelectorAll('video');
+    var audioPlayer = document.getElementById("audioPlayer");
+    function pauseAllExcept(selectedAudio) {
+      audioElements.forEach(audio => {
+          if (audio !== selectedAudio) {
+              audio.pause();
+          }
+      });
+  }
+  
+  // Function to play the selected song
+  function playSelectedSong() {
+      // Get the selected audio element
+      const selectedAudio = document.getElementById('audioPlayer');
+      const selectedSong = document.getElementById('songSelect').value;
+  
+      // Pause all other audio elements
+      pauseAllExcept(selectedAudio);
+  
+      // Set the source of the selected audio element to the chosen song
+      selectedAudio.src = selectedSong;
+  
+      // Play the selected song
+      selectedAudio.play();
+    
+  }
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function resetAndPlayVideo(video) {
+        video.currentTime = 0; // Reset to the beginning
+        video.muted = false;    // Unmute
+        video.play(); 
+        audioPlayer.pause();          // Start playing
+    }
+
+    function playNextVideo() {
+        const currentVideoIndex = Array.from(videos).findIndex(video => !video.paused);
+        if (currentVideoIndex !== -1 && currentVideoIndex < videos.length - 1) {
+            videos[currentVideoIndex].pause();
+            resetAndPlayVideo(videos[currentVideoIndex + 1]);
+            videos[currentVideoIndex + 1].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function playVideoInView() {
+        videos.forEach(video => {
+            if (isElementInViewport(video)) {
+                resetAndPlayVideo(video);
+            } else {
+                video.pause();
+                video.muted
+            }
+        });
+    }
+
+    window.addEventListener('scroll', playVideoInView);
+    window.addEventListener('resize', playVideoInView);
+
+    // Listen for the 'ended' event on each video
+    videos.forEach(video => {
+        video.addEventListener('ended', playNextVideo);
+    });
+
+    // Initial check
+    playVideoInView();
+</script>
+
+</div>
 </body>
 </html>

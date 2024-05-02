@@ -14,11 +14,7 @@ if (name === "chinni") {
   window.location.href = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5CTzbRKH4kXv9nGYUvs501eiHk-3jUQXQhN5kP5Tr8JoTm_xJQLbhHiRHKGahkuY4sN1s";
 }
 
-function playSelectedSong() {
-    var selectedSong = songSelect.value;
-    audioPlayer.src = selectedSong;
-    audioPlayer.play();
-}
+
 
 audioPlayer.addEventListener("ended", function() {
     playNextSong();

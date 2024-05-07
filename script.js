@@ -10,7 +10,7 @@ audioPlayer.addEventListener("ended", function() {
     playNextSong();
 });
 
-var songs = ["wannabe yours.mp3", "infinity_slowed.mp3", "nethone.mp3", "padi padileche manasu.mp3"];
+var songs = ["wannabe yours.mp3", "Ed Sheeran - Perfect .mp3","Avunanavaa.mp3","infinity_slowed.mp3", "nethone.mp3", "padi padileche manasu.mp3"];
 var currentIndex = 0; // Keep track of the current song index
 
 function playNextSong() {
@@ -27,3 +27,4 @@ function changeImage() {
   var resolution = document.getElementById('resolution').value;
   image.src = resolution;
 }
+

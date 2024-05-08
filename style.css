@@ -324,7 +324,6 @@ video {
   position: relative;
   height: 300px;
   width: 300px;
-  cursor: pointer;
   margin: 100px 50px 50px 50px;
   left: 90px;
 }

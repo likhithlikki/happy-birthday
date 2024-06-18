@@ -671,7 +671,7 @@ body {
 }
 .content-box .card-content {
   padding-top: 15px;
-  font-size: 12px;
+  font-size: 20px;
   color: #b9b9b9;
   transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 20px);
@@ -682,7 +682,7 @@ body {
 .content-box .see-more {
   display: block;
   font-weight: 900;
-  font-size: 11px;
+  font-size: 22px;
   text-transform: uppercase;
   color: #0088ff;
   padding-top: 15px;
@@ -694,6 +694,7 @@ body {
 }
 
 .date-box {
+  font-size: 20px;
   position: absolute;
   top: 75px;
   left: 25px;
@@ -740,8 +741,8 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 15px;
-  letter-spacing: 2.5px;
-  word-spacing: 3.5px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
  line-height: 2;
   margin: 200px 30px 200px 85px;
   text-align: justify;
